@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matemaatika Mäng</title>
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      
+      
+    />
+    
+    
+  </head>
+  <body>
+    
+    <div class="container">
+      <h3>Täida tühik õige numbri või operaatoriga</h3>
+      <div id="question"></div>
+      <button id="submit-btn">Esita</button>
+      <p id="error-msg"> demo veateade</p>
+    </div>
+    <div class="controls-container">
+      <p id="result"></p>
+      <button id="start-btn">Alusta Mängu</button>
+    </div>
+    
+    <nav class="navbar">
+      <div class="navbar__cont">
+        <div class="cont">
+          <p class="glitch">
+            <span aria-hidden="true">jagorX</span>
+            jagorX
+            <span aria-hidden="true">jagorX</span>
+          </p>
+        </div>
+        
+        
+       
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li id ="home"class="icon"><i class="material-icons">home</i></li>
+            <li class="navbar__item">
+              <a href="https://t2divello.github.io/Jagorx/" class="navbar__links" id="home-page" target="_blank" >kodu<span></span></a>
+            </li>
+            <li id="info" class="icon"><i class="material-icons">info</i></li>
+            <li class="navbar__item">
+              <a href="https://jagorx.com/about" class="navbar__links" id="about-page" target="_blank">info<span></span> </a>
+              <li id="lightbulb" class="icon"><i class="material-icons">lightbulb</i></li>
+            </li>
+            <li class="navbar__item">
+                <a href="https://jagorx.com/soovitus" class="navbar__links" id="services-page" target="_blank">
+                   soovitused<span></span></a
+              >
+            </li>
+            
+            
+            
+            
+          
+            
+  
+  
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <style>
+  
+  
+  .navbar__cont {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    z-index: 1;
+    width: 10%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .navbar__links span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #9518fc;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+  }
+  .navbar__links:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  #lightbulb{
+    padding-right: 25px;
+    color: rgb(255, 255, 255);
+  
+  
+  }
+  #info{
+    
+    color: rgb(255, 255, 255);
+  
+  
+  }
+  #home{
+    
+    color:white;
+  
+  
+  }
+  
+  
+  .navbar__item {
+    height: 40px;
+  }
+  
+  
+  
+  
+  
+  
+  .navbar__links:hover {
+    text-shadow: 0 0 10px #9518fc;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .navbar__cont {
+      display: flex;
+    }
+  }
+  
+  .navbar {
+    background-color: rgba(26,26,26, 0.3); /* Black background with 50% opacity */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add this line */
+  }
+  
+  .navbar__cont {
+    display: flex;
+    justify-content: space-between;
+    height: 6   0px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  
+  
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .navbar__item {
+    height: 80px;
+  }
+  
+  .navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+    font-family: cursive;
+  }
+  
+  
+  
+  
+  
+  .navbar__links:hover {
+    color: #9518fc;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .navbar__cont {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0;
+    }
+  
+    .navbar__menu {
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      top: -1000px;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: -1;
+    }
+  
+    .navbar__menu.active {
+      background: #131313;
+      top: 100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 99;
+      height: 60vh;
+      font-size: 1.6rem;
+    }
+  
+    #navbar__logo {
+      padding-left: 25px;
+    }
+  
+    .navbar__toggle .bar {
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background: #fff;
+    }
+  
+    .navbar__item {
+      width: 100%;
+    }
+  
+    .navbar__links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+  
+   
+  
+    #mobile-menu {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      transform: translate(5%, 20%);
+    }
+  
+    .navbar__toggle .bar {
+      display: block;
+      cursor: pointer;
+    }
+  
+    #mobile-menu.is-active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    #mobile-menu.is-active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    #mobile-menu.is-active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+  
+  
+  @media screen and (max-width: 1100px) {
+    .main__cont {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      height: 90%;
+    }
+  
+  
+  
+  }
+  
+  @media screen and (max-width: 480px) {
+  
+  
+  }
+  .glitch {
+    font-size: 2.9rem;
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+    animation: glitch 725ms infinite;
+    margin-top: -10px;
+    margin-left: -70px;
+  }
+  
+  .glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .glitch span:first-child {
+    animation: glitch 500ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    transform: translate(-0.04em, -0.03em);
+    opacity: 0.75;
+  }
+  
+  .glitch span:last-child {
+    animation: glitch 375ms infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    transform: translate(0.04em, 0.03em);
+    opacity: 0.75;
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+    }
+    15% {
+      text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+    }
+    16% {
+      text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+        -0.05em -0.05em 0 #fffc00;
+    }
+    49% {
+      text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+        -0.05em -0.05em 0 #fffc00;
+    }
+    50% {
+      text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+        0 -0.04em 0 #fffc00;
+    }
+    99% {
+      text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+        0 -0.04em 0 #fffc00;
+    }
+    100% {
+      text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+        -0.04em -0.025em 0 #fffc00;
+    }
+  }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background:  linear-gradient(to left, #2c3e50, #4ca1af);
+      }
+      
+.container {
+  background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+  width: 90%;
+  max-width: 31.25em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 5em 3em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+      
+      .container h3 {
+        font-size: 1.2em;
+        color: #23234c;
+        text-align: center;
+        font-weight: 500;
+        line-height: 1.8em;
+      }
+      .container #submit-btn {
+        font-size: 1.2em;
+        font-weight: 500;
+        display: block;
+        margin: 0 auto;
+        
+        border-radius: 0.3em;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #23234c;
+        padding: 0.6em 2em;
+      }
+      #error-msg {
+        text-align: center;
+        margin-top: 1em;
+        background-color: #ffdde0;
+        color: #d62f2f;
+        padding: 0.2em 0;
+      }
+      .container #question {
+        background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+        font-size: 2em;
+        font-weight: 600;
+        color: #23234c;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1.4em 0 1em 0;
+        padding: 1em 0;
+      }
+      .container input {
+        font-size: 1em;
+        font-weight: 600;
+        width: 2.35em;
+        color: #23234c;
+        text-align: center;
+        padding: 0 0.2em;
+        border: none;
+        background-color: transparent;
+        border-bottom: 0.12em solid #23234c;
+        margin: 0 0.25em;
+      }
+      .container input:focus {
+        background-image: linear-gradient(to bottom, #2c3e50, #4ca1af);
+        outline: none;
+      }
+      /*Peida numbrite nooled*/
+      .container input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      
+      
+      .controls-container {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom, #2c3e50, #4ca1af);
+        color: #fff;
+        overflow-x: hidden;
+        height: 100%;
+        width: 100%;
+        top: 0;
+      }
+      #start-btn {
+        font-size: 1.2em;
+        font-weight: 500;
+        background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+        color: #23234c;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 0.8em 1.8em;
+        border-radius: 0.3em;
+      }
+      #result {
+        margin-bottom: 1em;
+        font-size: 1.5em;
+        color: #23234c;
+      }
+      #result span {
+        font-weight: 600;
+      }
+      
+      .hide {
+        display: none;
+      }
+    </style>
+    
+    <script >let operators = ["+", "-", "*"];
+      const startBtn = document.getElementById("start-btn");
+      const question = document.getElementById("question");
+      const controls = document.querySelector(".controls-container");
+      const result = document.getElementById("result");
+      const submitBtn = document.getElementById("submit-btn");
+      const errorMessage = document.getElementById("error-msg");
+      let answerValue;
+      let operatorQuestion;
+      
+      //Juhusliku väärtuse generaator
+      const randomValue = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+      
+      const questionGenerator = () => {
+        //Kaks juhuslikku väärtust vahemikus 1 kuni 20
+        let [num1, num2] = [randomValue(1, 20), randomValue(1, 20)];
+      
+        //Juhusliku operaatori saamiseks
+        let randomOperator = operators[Math.floor(Math.random() * operators.length)];
+      
+        if (randomOperator == "-" && num2 > num1) {
+          [num1, num2] = [num2, num1];
+        }
+      
+        //Lahenda võrrand
+        let solution = eval(`${num1}${randomOperator}${num2}`);
+      
+        //Paiguta sisend juhuslikule positsioonile
+        //(1 num1 jaoks, 2 num2 jaoks, 3 operaatori jaoks, muu (4) lahenduse jaoks)
+        let randomVar = randomValue(1, 5);
+      
+        if (randomVar == 1) {
+          answerValue = num1;
+          question.innerHTML = `<input type="number" id="inputValue" placeholder="?"\> ${randomOperator} ${num2} = ${solution}`;
+        } else if (randomVar == 2) {
+          answerValue = num2;
+          question.innerHTML = `${num1} ${randomOperator}<input type="number" id="inputValue" placeholder="?"\> = ${solution}`;
+        } else if (randomVar == 3) {
+          answerValue = randomOperator;
+          operatorQuestion = true;
+          question.innerHTML = `${num1} <input type="text" id="inputValue" placeholder="?"\> ${num2} = ${solution}`;
+        } else {
+          answerValue = solution;
+          question.innerHTML = `${num1} ${randomOperator} ${num2} = <input type="number" id="inputValue" placeholder="?"\>`;
+        }
+      
+        //Kasutaja sisendi kontroll
+        submitBtn.addEventListener("click", () => {
+          errorMessage.classList.add("hide");
+          let userInput = document.getElementById("inputValue").value;
+          //Kui kasutaja sisend pole tühi
+          if (userInput) {
+            //Kui kasutaja arvas õige vastuse
+            if (userInput == answerValue) {
+              stopGame(`Jippie!! <span>Õige</span> Vastus`);
+            }
+            //Kui kasutaja sisestab operaatori, mis pole +,-,*
+            else if (operatorQuestion && !operators.includes(userInput)) {
+              errorMessage.classList.remove("hide");
+              errorMessage.innerHTML = "Palun sisesta kehtiv operaator";
+            }
+            //Kui kasutaja arvas vale vastuse
+            else {
+              stopGame(`Ups!! <span>Vale</span> Vastus`);
+            }
+          }
+          //Kui kasutaja sisend on tühi
+          else {
+            errorMessage.classList.remove("hide");
+            errorMessage.innerHTML = "Sisend ei saa olla tühi";
+          }
+        });
+      };
+      
+      //Alusta mängu
+      startBtn.addEventListener("click", () => {
+        operatorQuestion = false;
+        answerValue = "";
+        errorMessage.innerHTML = "";
+        errorMessage.classList.add("hide");
+        //Kontrollide ja nuppude nähtavus
+        controls.classList.add("hide");
+        startBtn.classList.add("hide");
+        questionGenerator();
+      });
+      
+      //Lõpeta mäng
+      const stopGame = (resultText) => {
+        result.innerHTML = resultText;
+        startBtn.innerText = "Alusta Uuesti";
+        controls.classList.remove("hide");
+        startBtn.classList.remove("hide");
+      };</script>
+  </body>
+</html>

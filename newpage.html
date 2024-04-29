@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+  <html lang="estonian">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>jagorX</title>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+        
+        
+      />
+    </head>
+    <body>
+
+      
+      
+      <nav class="navbar">
+        <div class="navbar__container">
+          <div class="container">
+            <p class="glitch">
+              <span aria-hidden="true"></span>
+              
+              <span aria-hidden="true"></span>
+            </p>
+          </div>
+          
+          
+          
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <a href="page2.html">
+            <button class ="page"class="arrow-button">lehekülg  2</button></a>
+            
+            <a href="page3.html">
+            <button class ="page"class="arrow-button">lehekülg  3</button></a>
+            
+            <a href="page4.html ">
+                <button class ="page"class="arrow-button">lehekülg  4</button></a>
+            
+            <a class ="material icons"href="page5.html">
+            <button class ="page"class="arrow-button">lehekülg 5</button></a>
+            
+            
+          <ul class="navbar__menu">
+            <li id ="home"class="icon"><i class="material-icons">home</i></li>
+            <li class="navbar__item">
+              <a href="https://t2divello.github.io/Jagorx/" class="navbar__links" id="home-page" target="_blank" >kodu<span></span></a>
+            </li>
+            <li id="info" class="icon"><i class="material-icons">info</i></li>
+            <li class="navbar__item">
+              <a href="https://jagorx.com/about" class="navbar__links" id="about-page" target="_blank">info<span></span> </a>
+              <li id="lightbulb" class="icon"><i class="material-icons">lightbulb</i></li>
+            </li>
+            <li class="navbar__item">
+                <a href="https://jagorx.com/soovitus" class="navbar__links" id="services-page" target="_blank">
+                   soovitused<span></span></a
+              >
+            </li>
+            
+            
+              
+
+
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="image-container">
+        <h1>Murrud:</h1>
+        <p class="text">
+            
+
+ Murd on arv, mis on esitatud kahe arvu jagamisena, kus nimetaja näitab, kui palju osi on tervikust, ja lugeja näitab, mitu neist osadest on võetud.
+Nimetaja ja lugeja: Nimetaja on murru alumine number, mis näitab osade arvu tervikust, ja lugeja on ülemine number, mis näitab, mitu neist osadest on võetud.
+
+
+ Murd on lihtsustatud, kui nii nimetaja kui ka lugeja on omavahel alati jagatavad.
+ Mitu murdu on lihtsam võrrelda, kui neil on sama nimetaja. Selle saavutamiseks võidakse murde korrutada ja jagada vastavalt vajadusele.
+Murdude teisendamine samu nimetajaid või tervikuks:
+
+Murru teisendamine samu nimetajaid: Murde saab teisendada samu nimetajaid omavateks, muutes iga murru vastavalt.
+Murru teisendamine tervikuks: Murru saab teisendada täisarvuks, kui lugeja on võrdne nimetajaga. Näiteks murd 3/3 on võrdne tervikuga 1.
+
+           
+            Kahte murdu saab võrrelda, kui need on samade nimetajatega. Võrreldakse nende lugejaid, et näha, kumb murd on suurem või väiksem.
+            Murdude järjestamine: Murdude järjestamisel tuleb need tavaliselt teisendada samade nimetajatega ja seejärel võrrelda nende lugejaid.
+            
+           
+            
+            Liitmine ja lahutamine: Murde saab liita või lahutada, kui neil on samad nimetajad. Nimetajad jäävad samaks, kuid lugejad liidetakse või lahutatakse vastavalt.
+            Korrutamine ja jagamine: Murde saab korrutada ja jagada, korrutades või jagades vastavalt nende lugejad ja nimetajad.</p>
+        
+      </div>
+      
+
+
+
+
+<style>
+    h1{
+         
+          
+          
+        
+        
+        color: rgb(44, 44, 44);
+        font-size: 3.2rem;
+        padding-bottom: 30px;
+        font-weight: bold;
+        font-family: cursive;
+      }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Kumbh Sans', sans-serif;
+        scroll-behavior: smooth;
+      }
+      body {
+        background-image: url("https://cdn.pixabay.com/photo/2017/07/25/11/44/wrinkled-2537807_1280.jpg");
+        color: #fff;
+        overflow-x: hidden;
+      }
+      
+     
+        .image-container {
+          position: relative;
+        }
+        
+        .image-container img {
+          margin-left: 500px;
+          height: auto;
+          height: 820px;
+        }
+        
+        .image-container .text {
+          position: absolute;
+         
+          
+          
+          
+          
+          color: rgb(44, 44, 44);
+          font-size: 35px;
+          font-weight: bold;
+          font-family: cursive;
+        }
+        
+
+    .page {
+        background-color: #cacaca1c;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        
+    }
+    button {
+        font-family: var(--font-sans);
+        font-weight: var(--font-weight-6);
+        font-size: var(--font-size-5);
+        color: var(--gray-8);
+        background: var(--gray-0);
+        border: 0;
+        padding: var(--size-4) var(--size-8);
+        transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+        transition: transform 0.1s;
+        position: relative;
+      }
+      
+      button:hover {
+        --y: -10;
+        --scale: 1.1;
+        --border-scale: 1;
+      }
+      
+      button:active {
+        --y: 5%;
+        --scale: 0.9;
+        --border-scale: 0.9, 0.8;
+      }
+      
+      
+      
+      .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        z-index: 1;
+        width: 10%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .navbar__links span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-bottom: 2px solid #9518fc;
+        border-radius: 15px;
+        transform: scale(0) translateY(50px);
+        opacity: 0;
+        transition: .5s;
+      }
+      .navbar__links:hover span {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+      .navbar__menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+      }
+      #lightbulb{
+        padding-right: 25px;
+        color: rgb(255, 255, 255);
+    
+    
+      }
+      #info{
+        
+        color: rgb(255, 255, 255);
+    
+    
+      }
+      #home{
+        
+        color:white;
+    
+    
+      }
+    
+      
+      .navbar__item {
+        height: 40px;
+      }
+      
+      
+      
+      
+    
+      
+      .navbar__links:hover {
+        text-shadow: 0 0 10px #9518fc;
+        transition: all 0.3s ease;
+      }
+      
+      @media screen and (max-width: 480px) {
+        .navbar__container {
+          display: flex;
+        }
+      }
+      
+      .navbar {
+        background-color: rgba(26,26,26, 0.8); /* Black background with 50% opacity */
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+       
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add this line */
+      }
+      
+      .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 6   0px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 50px;
+      }
+    
+      
+      .navbar__menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+      }
+      
+      .navbar__item {
+        height: 80px;
+      }
+      
+      .navbar__links {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 125px;
+        text-decoration: none;
+        height: 100%;
+        transition: all 0.3s ease;
+        font-size: 1.3rem;
+        font-family: cursive;
+      }
+      
+      
+      
+    
+      
+      .navbar__links:hover {
+        color: #9518fc;
+        transition: all 0.3s ease;
+      }
+      
+      @media screen and (max-width: 960px) {
+        .navbar__container {
+          display: flex;
+          justify-content: space-between;
+          height: 80px;
+          z-index: 1;
+          width: 100%;
+          max-width: 1300px;
+          padding: 0;
+        }
+      
+        .navbar__menu {
+          display: grid;
+          grid-template-columns: auto;
+          margin: 0;
+          width: 100%;
+          position: absolute;
+          top: -1000px;
+          opacity: 1;
+          transition: all 0.5s ease;
+          z-index: -1;
+        }
+      
+        .navbar__menu.active {
+          background: #131313;
+          top: 100%;
+          opacity: 1;
+          transition: all 0.5s ease;
+          z-index: 99;
+          height: 60vh;
+          font-size: 1.6rem;
+        }
+      
+        #navbar__logo {
+          padding-left: 25px;
+        }
+      
+        .navbar__toggle .bar {
+          width: 25px;
+          height: 3px;
+          margin: 5px auto;
+          transition: all 0.3s ease-in-out;
+          background: #fff;
+        }
+      
+        .navbar__item {
+          width: 100%;
+        }
+      
+        .navbar__links {
+          text-align: center;
+          padding: 2rem;
+          width: 100%;
+          display: table;
+        }
+      
+       
+      
+        #mobile-menu {
+          position: absolute;
+          top: 20%;
+          right: 5%;
+          transform: translate(5%, 20%);
+        }
+      
+        .navbar__toggle .bar {
+          display: block;
+          cursor: pointer;
+        }
+      
+        #mobile-menu.is-active .bar:nth-child(2) {
+          opacity: 0;
+        }
+      
+        #mobile-menu.is-active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+      
+        #mobile-menu.is-active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    
+     
+      @media screen and (max-width: 1100px) {
+        .main__container {
+          display: grid;
+          grid-template-columns: 1fr;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          margin: 0 auto;
+          height: 90%;
+        }
+      
+    
+      
+      }
+      
+      @media screen and (max-width: 480px) {
+      }
+       .icon{
+    color:rgb(200, 200, 200);
+    margin-right: -20px;
+    
+    
+
+
+  }
+  .glitch {
+    font-size: 2.9rem;
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+    animation: glitch 725ms infinite;
+    margin-top: -10px;
+    margin-left: -70px;
+  }
+  
+  .glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .glitch span:first-child {
+    animation: glitch 500ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    transform: translate(-0.04em, -0.03em);
+    opacity: 0.75;
+  }
+  
+  .glitch span:last-child {
+    animation: glitch 375ms infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    transform: translate(0.04em, 0.03em);
+    opacity: 0.75;
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+    }
+    15% {
+      text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+    }
+    16% {
+      text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+        -0.05em -0.05em 0 #fffc00;
+    }
+    49% {
+      text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+        -0.05em -0.05em 0 #fffc00;
+    }
+    50% {
+      text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+        0 -0.04em 0 #fffc00;
+    }
+    99% {
+      text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+        0 -0.04em 0 #fffc00;
+    }
+    100% {
+      text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+        -0.04em -0.025em 0 #fffc00;
+    }
+  }
+  
+  
+      
+</style>
+
+</body>
+</html>

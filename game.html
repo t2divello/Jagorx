@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>viktoriini äpp</title>
+<style>
+ 
+/*	import it from google fonts or use any font*/
+	@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+	body {
+  background-image: url('https://cdn.pixabay.com/photo/2023/03/08/19/37/mathematics-7838562_1280.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+		
+		font-family: 'Merriweather', serif;
+	}
+	.container {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+		background-color: white;
+		width: 700px;
+		height: auto;
+		margin: 0px;
+		border: 1px solid #DDDDDD;
+		border-radius: 4px;
+	}
+	.progress-bar {
+		height: 4px;
+		width: calc(0% - 3px);
+		background-color: white;
+		border-radius: 0px 14px 14px 0px;
+		position: absolute;
+		top: 71px;
+		border: 3px solid #098bdc;
+		border-left: 0px;
+		transition-duration: .4s;
+	}
+	.quiz-header {
+		width: 100%;
+		line-height: 76px;
+		background-color: #4EB7F8;
+		border-radius: 4px 4px 0px 0px;
+		color: white;
+		font-size: 25px;
+	}
+	.quiz-header .heading {
+		display: inline-block;
+		margin-left: 40px;
+	}
+	.quiz-header .total-q {
+		float: right;
+		display: inline-block;
+		margin-right: 40px;
+	}
+	.question ul li {
+		list-style: none;
+		display: none;
+	}
+
+	.question ul li:first-child {
+		display: block;
+	}
+	.question .q {
+		font-size: 20px;
+		margin: 30px 40px 20px 0px;
+	}
+	.question button {
+		display: block;
+		width: 280px;
+		text-align: left;
+		padding-left: 10px;
+		height: 33px;
+		margin: 10px 50px 10px 0px;
+		border: 1px solid #91D2FA;
+		background-color: rgba(0,0,0,0.00);
+		border-radius: 3px;
+		transition-duration: .2s;
+		cursor: pointer;
+		font-family: 'Montserrat', sans-serif;
+	}
+	.question button:hover {
+		color: white;
+		background-color: #4EB7F8;
+		border: 1px solid #4EB7F8;
+	}
+	.question button:focus {
+		outline: none;
+	}
+	.quiz-footer {
+		border-top: 1px solid #DDDDDD;
+		width: 100%;
+		line-height: 75px;
+		margin-top: 30px;
+	}
+	.quiz-footer .timeout {
+		display: inline-block;
+		margin-left: 35px;
+	}
+	.quiz-footer .timeout span {
+		font-size: 25px;
+	}
+	.quiz-footer button {
+		display: inline-block;
+		float: right;
+		margin-top: 22px;
+		margin-right: 38px;
+		background-color: #4EB7F8;
+		border: 0px;
+		color: white;
+		padding: 8px 30px;
+		border-radius: 4px;
+		cursor: pointer;
+		font-family: 'Montserrat', sans-serif;
+	}
+	.question button.correct {
+		border: 1px solid green;
+		background-color: rgba(0, 243, 0, .50);
+	}
+	.question button.wrong {
+		border: 1px solid red;
+		background-color: rgba(255, 0, 0, .50);
+	}
+	@media screen and (max-width: 715px){
+		.container {
+			width: 95%;
+		}
+	}
+</style>
+</head>
+
+<body>
+  
+	<div class="container">
+		<div class="progress-bar"></div>
+		<div class="quiz-header">
+			<div class="heading">jagorX viktoriin</div>
+			<div class="total-q">0/0</div>
+		</div>
+		<div class="quiz-body">
+			<div class="question">
+				<ul>
+
+<li answer-number="1">
+  <div class="q">Leia ristküliku ümbermõõt, kui selle pikkus on 12 cm ja laius 8 cm.</div>
+  <button type="button">20 cm</button>
+  <button type="button">40 cm</button>
+  <button type="button">56 cm</button>
+  <button type="button">40 cm</button>
+</li>
+<li answer-number="2">
+  <div class="q">Pood pakub kõikidele esemetel 20% allahindlust. Kui särgi algne hind on 25 eurot, siis mis on allahindletud hind?</div>
+  <button type="button"> 20 eurot</button>
+  <button type="button">18 eurot</button>
+  <button type="button">15 eurot</button>
+  <button type="button">20 eurot</button>
+</li>
+<li answer-number="1">
+  <div class="q">mis on pi(π) väärtus?</div>
+  <button type="button">3.14</button>
+  <button type="button">2.71</button>
+  <button type="button">1.618</button>
+  <button type="button">0.577</button>
+</li>
+<li answer-number="4">
+  <div class="q">Auto sõidab kiirusega 60 km/h. Kui kaugele see jõuab 3 tunniga?</div>
+  <button type="button">110 km</button>
+  <button type="button">120 km</button>
+  <button type="button">160 km</button>
+  <button type="button">180 km</button>
+</li>
+<li answer-number="4">
+  <div class="q"?>mis on nürinurk</div>
+  <button type="button">suur kolmnurk</button>
+  <button type="button">ruudu kujuline ristkülik</button>
+  <button type="button">nüri kolmnurk</button>
+  <button type="button">nurk mis on suurem kui 90 kraadi</button>
+</li>
+
+
+				</ul>
+			</div>
+		</div>
+		<div class="quiz-footer">
+			<div class="timeout">Aega jäänud: <span>20</span>s</div>
+			<button type="button" onClick="showQ()" id="showQ">Järgmine</button>
+			<button type="button" onClick="result(true)" id="result" style="display: none">Saa vastus</button>
+		</div>
+	</div>
+<script>
+window.onload = showQ;
+
+var i = 0;
+function showQ(){
+
+	var ul = document.getElementsByTagName('ul')[0];
+	var li = ul.getElementsByTagName('li');
+	for(var j = 0; j<= li.length-1; j++){
+
+		if(i == j){
+			li[j].style.display = 'block';
+			
+			var ans = li[j].getAttribute('answer-number');
+			var btn = li[j].getElementsByTagName('button');
+			for(var k = 0; k <= btn.length-1; k++){
+				if(k+1 == ans){
+					
+					btn[k].setAttribute('answer', true);
+					
+					btn[k].setAttribute('onClick', "clickAns("+i+", this)");
+					
+				}else{
+					btn[k].setAttribute('answer', false);
+					btn[k].setAttribute('onClick', "clickAns("+i+", this)");
+				}
+			}
+		}else{
+			li[j].style.display = 'none';
+		}
+	}
+	
+	document.getElementsByClassName('total-q')[0].innerHTML = i+1 + "/" + li.length;
+	
+	document.getElementsByClassName('progress-bar')[0].style.width = (i/li.length)*100 + '%';
+	
+	if(i == li.length-1){
+		i = 0;
+		
+		document.getElementById("showQ").style.display = 'none';
+		document.getElementById("result").style.display = 'block';
+		document.getElementsByClassName('timeout')[0].setAttribute('show-result', 'true')
+	}else{
+		i++;
+	}
+	// disable show next question button until not answered
+	document.getElementById("showQ").disabled = true;
+	// now make a timeout
+	// test it
+	document.getElementsByClassName('timeout')[0].setAttribute('data-remain', 20);
+}
+setInterval(function(){
+	// this function will get data-remain value and decrease by 1 and add to data-remain again after 1 second
+	var dataContainer = document.getElementsByClassName('timeout')[0];
+	var getData = dataContainer.getAttribute('data-remain');
+	// if answer is last then don't show first answer just show result
+	var showResult = dataContainer.getAttribute('show-result');
+	// but we need to set this attribute on last question
+	if(getData >= 0){
+		try{document.querySelector('.timeout span').innerHTML = getData}catch{};
+			getData--;
+			dataContainer.setAttribute('data-remain', getData);
+	}else{
+		// now if last question
+		if(showResult == 'true'){
+			document.getElementById('result').click();
+		}else{
+		    // if getData is less than 0
+		    // then show next answer
+		    showQ();
+		}
+	}
+}, 1000);
+// now make a function for answer
+function clickAns(i, e){
+	var ul = document.getElementsByTagName('ul')[0];
+	var li = ul.getElementsByTagName('li');
+	var btn = li[i].getElementsByTagName('button');
+	// get the answer form the button 
+	var v = e.getAttribute('answer');
+	for(var j = 0; j <= btn.length-1; j++){
+		if(v == 'true'){
+			// if answer is true
+			e.className = 'correct';
+			result(false);
+		}else{
+			e.className = 'wrong';
+			//first make both class in css
+			// also show correct answer after wrong clicked
+			for(var k = 0; k <= btn.length-1; k++){
+//				we only need the show correct ans
+				if(btn[k].getAttribute('answer') == 'true'){
+					btn[k].className = 'correct';
+				}
+				
+			}
+		}
+		// disable button after first click
+		btn[j].disabled = true;
+	}
+	// also enable next question button after click
+	document.getElementById("showQ").disabled = false;
+}
+// now get the result
+var numPerQ = 5;
+var correctAns = 0;
+	// we run the function from two side 1 just add correct answer number and 2 will show answer
+function result(showAns){
+	var ul = document.getElementsByTagName('ul')[0];
+	var li = ul.getElementsByTagName('li');
+	if(showAns == false){
+		// it will add answer
+		correctAns++;
+	}else{
+		// it will show result
+		var result = (correctAns/4)*numPerQ;
+		var totalNumb = li.length*numPerQ;
+		document.getElementsByClassName('timeout')[0].innerHTML = 'tulemus on: ' + result + '/' + totalNumb;
+		document.getElementsByClassName('progress-bar')[0].style.width = 'calc(100% - 3px)';
+	}
+}
+</script>
+</body>
+</html>
